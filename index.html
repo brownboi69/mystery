@@ -4,31 +4,27 @@
   <title>Happy Birthday!</title>
   <style>
     body {
-      background-color: lightpink;
+      background-color: #FDF5E6;
       text-align: center;
       font-family: Arial, sans-serif;
-      overflow: hidden; /* Hide scrollbars */
     }
 
     h1 {
       color: #FF69B4;
-      font-size: 40px;
+      font-size: 32px;
       margin-top: 30px;
       text-shadow: 2px 2px 4px #000000;
-      font-family: 'Arial Black', sans-serif;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1.5;
       margin-bottom: 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     #cake-img {
-      max-width: 400px;
-      max-height: 300px;
-      margin-top: 30px;
+      max-width: 300px;
+      margin-top: 50px;
       box-shadow: 0px 0px 10px #888888;
     }
 
@@ -36,7 +32,6 @@
       position: relative;
       margin: auto;
       max-width: 500px;
-      max-height: 400px;
       overflow: hidden;
       margin-top: 40px;
     }
@@ -44,130 +39,40 @@
     .image-slide {
       display: none;
       max-width: 100%;
-      max-height: 100%;
-      animation: rotate 2s linear infinite;
+      height: auto;
+      animation: fade 4s ease-in-out infinite;
     }
 
-    .slideshow-description {
-      font-size: 16px;
-      margin-top: 10px;
+    @keyframes fade {
+      0% { opacity: 0; transform: rotate(0deg); }
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; transform: rotate(360deg); }
     }
 
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Heart Animation */
-    .heart {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background-color: #FF69B4;
-      border-radius: 50%;
-      animation: heartbeat 1s infinite;
-    }
-
-    @keyframes heartbeat {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.3);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    /* Background Hearts */
     .background-hearts {
-      pointer-events: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      pointer-events: none;
       z-index: -1;
-      overflow: hidden;
     }
 
     .background-hearts .heart {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background-color: #FF69B4;
-      border-radius: 50%;
-      opacity: 0;
-      animation: heartbeat 1s infinite;
-    }
-
-    .background-hearts .heart:nth-child(2) {
-      width: 15px;
-      height: 15px;
-      animation-delay: 0.5s;
-    }
-
-    .background-hearts .heart:nth-child(3) {
       width: 10px;
       height: 10px;
-      animation-delay: 0.2s;
+      background-color: #FF69B4;
+      border-radius: 50%;
+      animation: throbbing 1s ease-in-out infinite;
     }
 
-    .background-hearts .heart:nth-child(4) {
-      width: 12px;
-      height: 12px;
-      animation-delay: 0.7s;
-    }
-
-    .background-hearts .heart:nth-child(5) {
-      width: 18px;
-      height: 18px;
-      animation-delay: 0.3s;
-    }
-
-    .background-hearts .heart:nth-child(6) {
-      width: 14px;
-      height: 14px;
-      animation-delay: 0.9s;
-    }
-
-    .background-hearts .heart:nth-child(7) {
-      width: 16px;
-      height: 16px;
-      animation-delay: 0.4s;
-    }
-
-    .background-hearts .heart:nth-child(8) {
-      width: 13px;
-      height: 13px;
-      animation-delay: 0.6s;
-    }
-
-    .background-hearts .heart:nth-child(9) {
-      width: 19px;
-      height: 19px;
-      animation-delay: 0.8s;
-    }
-
-    .background-hearts .heart:nth-child(10) {
-      width: 17px;
-      height: 17px;
-      animation-delay: 0.1s;
-    }
-
-    .background-hearts .heart:nth-child(11) {
-      width: 11px;
-      height: 11px;
-      animation-delay: 1s;
+    @keyframes throbbing {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -193,20 +98,12 @@
   <p>On your special day (as special as it can be without me, obviously), I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side :)</p>
   <p>I hope your birthday is filled with love, laughter, and amazing memories. May this year bring you abundant blessings and opportunities to pursue your dreams.</p>
   <p>Thank you for being the wonderful person you are. Happy 20th birthday, my love!</p>
+
   <div class="slideshow-container">
-    <div class="image-slide">
-      <img src="https://brownboi69.github.io/mystery/image/blood.jpg" alt="Slideshow Image 1">
-      <p class="What a cute lil gangster!!!!">Description for Image 1</p>
-    </div>
-    <div class="image-slide">
-      <img src="https://example.com/path/to/image2.jpg" alt="Slideshow Image 2">
-      <p class="slideshow-description">Description for Image 2</p>
-    </div>
-    <div class="image-slide">
-      <img src="https://example.com/path/to/image3.jpg" alt="Slideshow Image 3">
-      <p class="slideshow-description">Description for Image 3</p>
-    </div>
-    <!-- Add more image slides with descriptions -->
+    <img class="image-slide" src="https://example.com/path/to/image1.jpg" alt="Slideshow Image 1">
+    <img class="image-slide" src="https://example.com/path/to/image2.jpg" alt="Slideshow Image 2">
+    <img class="image-slide" src="https://example.com/path/to/image3.jpg" alt="Slideshow Image 3">
+    <!-- Add more image slides here -->
   </div>
 
   <script>
