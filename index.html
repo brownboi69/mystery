@@ -36,6 +36,7 @@
       position: relative;
       margin: auto;
       max-width: 500px;
+      max-height: 400px;
       overflow: hidden;
       margin-top: 40px;
     }
@@ -43,8 +44,8 @@
     .image-slide {
       display: none;
       max-width: 100%;
-      height: auto;
-      animation: fade 4s ease-in-out infinite;
+      max-height: 100%;
+      animation: rotate 2s linear infinite;
     }
 
     .slideshow-description {
@@ -52,11 +53,13 @@
       margin-top: 10px;
     }
 
-    @keyframes fade {
-      0% { opacity: 0; }
-      25% { opacity: 1; }
-      75% { opacity: 1; }
-      100% { opacity: 0; }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     /* Heart Animation */
@@ -82,12 +85,107 @@
         transform: scale(1);
       }
     }
+
+    /* Background Hearts */
+    .background-hearts {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background-hearts .heart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #FF69B4;
+      border-radius: 50%;
+      opacity: 0;
+      animation: heartbeat 1s infinite;
+    }
+
+    .background-hearts .heart:nth-child(2) {
+      width: 15px;
+      height: 15px;
+      animation-delay: 0.5s;
+    }
+
+    .background-hearts .heart:nth-child(3) {
+      width: 10px;
+      height: 10px;
+      animation-delay: 0.2s;
+    }
+
+    .background-hearts .heart:nth-child(4) {
+      width: 12px;
+      height: 12px;
+      animation-delay: 0.7s;
+    }
+
+    .background-hearts .heart:nth-child(5) {
+      width: 18px;
+      height: 18px;
+      animation-delay: 0.3s;
+    }
+
+    .background-hearts .heart:nth-child(6) {
+      width: 14px;
+      height: 14px;
+      animation-delay: 0.9s;
+    }
+
+    .background-hearts .heart:nth-child(7) {
+      width: 16px;
+      height: 16px;
+      animation-delay: 0.4s;
+    }
+
+    .background-hearts .heart:nth-child(8) {
+      width: 13px;
+      height: 13px;
+      animation-delay: 0.6s;
+    }
+
+    .background-hearts .heart:nth-child(9) {
+      width: 19px;
+      height: 19px;
+      animation-delay: 0.8s;
+    }
+
+    .background-hearts .heart:nth-child(10) {
+      width: 17px;
+      height: 17px;
+      animation-delay: 0.1s;
+    }
+
+    .background-hearts .heart:nth-child(11) {
+      width: 11px;
+      height: 11px;
+      animation-delay: 1s;
+    }
   </style>
 </head>
 <body>
-  <div class="heart"></div>
-  <div class="heart"></div>
-  <div class="heart"></div>
+  <div class="background-hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
   <h1>Happy Birthday my sweet princess!</h1>
   <img id="cake-img" src="https://brownboi69.github.io/mystery/image/zoe_baby.jpg" alt="Birthday Cake">
 
@@ -96,4 +194,37 @@
   <p>I hope your birthday is filled with love, laughter, and amazing memories. May this year bring you abundant blessings and opportunities to pursue your dreams.</p>
   <p>Thank you for being the wonderful person you are. Happy 20th birthday, my love!</p>
   <div class="slideshow-container">
-    <img class="image-slide" src="https://example.com/path/to/image1.jpg" alt="Slideshow Image 1">
+    <div class="image-slide">
+      <img src="https://example.com/path/to/image1.jpg" alt="Slideshow Image 1">
+      <p class="slideshow-description">Description for Image 1</p>
+    </div>
+    <div class="image-slide">
+      <img src="https://example.com/path/to/image2.jpg" alt="Slideshow Image 2">
+      <p class="slideshow-description">Description for Image 2</p>
+    </div>
+    <div class="image-slide">
+      <img src="https://example.com/path/to/image3.jpg" alt="Slideshow Image 3">
+      <p class="slideshow-description">Description for Image 3</p>
+    </div>
+    <!-- Add more image slides with descriptions -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var slides = document.getElementsByClassName("image-slide");
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 15000); // Change slide every 15 seconds
+    }
+  </script>
+</body>
+</html>
