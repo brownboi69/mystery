@@ -21,17 +21,57 @@
       max-width: 300px;
       margin-top: 50px;
     }
+
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+      max-width: 500px;
+    }
+
+    .image-slide {
+      display: none;
+      max-width: 100%;
+      height: auto;
+      animation: fade 2s ease-in-out infinite;
+    }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
-  <h1>Happy Birthday, [Your Girlfriend's Name]!</h1>
+  <h1>Happy 20th Birthday, Zoe!</h1>
   <img id="cake-img" src="https://example.com/path/to/your/girlfriends/favorite/cake/image.jpg" alt="Birthday Cake">
-  <p>Dear [Your Girlfriend's Name],</p>
-  <p>Wishing you the most incredible birthday filled with love, joy, and happiness!</p>
-  <p>You mean the world to me, and I'm grateful to have you in my life.</p>
-  <p>Enjoy your special day to the fullest!</p>
-  <p>With all my love,</p>
-  <p>[Your Name]</p>
+  <p>Dear Zoe,</p>
+  <p>On your special day, I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side.</p>
+  <p>Wishing you a birthday filled with love, laughter, and amazing memories. May this year bring you abundant blessings and opportunities to pursue your dreams.</p>
+  <p>Thank you for being the wonderful person you are. Happy 20th birthday, my love!</p>
+  <div class="slideshow-container">
+    <img class="image-slide" src="https://example.com/path/to/image1.jpg" alt="Slideshow Image 1">
+    <img class="image-slide" src="https://example.com/path/to/image2.jpg" alt="Slideshow Image 2">
+    <img class="image-slide" src="https://example.com/path/to/image3.jpg" alt="Slideshow Image 3">
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var slides = document.getElementsByClassName("image-slide");
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+  </script>
 </body>
 </html>
-
