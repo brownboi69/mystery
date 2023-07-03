@@ -36,16 +36,30 @@
       margin-top: 40px;
     }
 
-    .image-slide {
+    .slide {
       display: none;
-      max-width: 100%;
-      height: auto;
-      animation: rotate 2s linear infinite;
     }
 
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      max-width: 100%;
+      height: auto;
+      animation: fade 5s ease-in-out infinite;
+    }
+
+    .slide p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
 </head>
@@ -58,17 +72,50 @@
   <p>I hope your birthday is filled with love, laughter, and amazing memories. May this year bring you abundant blessings and opportunities to pursue your dreams.</p>
   <p>Thank you for being the wonderful person you are. Happy 20th birthday, my love!</p>
   <div class="slideshow-container">
-    <img class="image-slide" src="image/blood.jpg" alt="Slideshow Image 1">
-    <img class="image-slide" src="image/IMG-1666.jpg" alt="Slideshow Image 2">
-    <img class="image-slide" src="image/IMG-5930.jpg" alt="Slideshow Image 3">
-    <img class="image-slide" src="image/IMG-8009.jpg" alt="Slideshow Image 4">
-    <img class="image-slide" src="image/IMG-0089.jpg" alt="Slideshow Image 5">
-    <img class="image-slide" src="image/IMG-2900.JPG" alt="Slideshow Image 6">
-    <img class="image-slide" src="image/IMG-5130.jpg" alt="Slideshow Image 7">
-    <img class="image-slide" src="image/IMG-6111.jpg" alt="Slideshow Image 8">
-    <img class="image-slide" src="image/IMG-7956.JPG" alt="Slideshow Image 9">
-    <img class="image-slide" src="image/IMG-8756.jpg" alt="Slideshow Image 10">
-    <img class="image-slide" src="image/image11.jpg" alt="Slideshow Image 11">
+    <div class="slide active">
+      <img src="image/blood.jpg" alt="Slideshow Image 1">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-1666.jpg" alt="Slideshow Image 2">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-5930.jpg" alt="Slideshow Image 3">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-8009.jpg" alt="Slideshow Image 4">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-0089.jpg" alt="Slideshow Image 5">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-2900.JPG" alt="Slideshow Image 6">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-5130.jpg" alt="Slideshow Image 7">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-6111.jpg" alt="Slideshow Image 8">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-7956.JPG" alt="Slideshow Image 9">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/IMG-8756.jpg" alt="Slideshow Image 10">
+      <p class="description">This image is so cute?</p>
+    </div>
+    <div class="slide">
+      <img src="image/image11.jpg" alt="Slideshow Image 11">
+      <p class="description">This image is so cute?</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
