@@ -2,17 +2,101 @@
 <html>
 <head>
   <title>Happy Birthday!</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #FFD9E6;
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    h1 {
+      color: #FF69B4;
+      font-size: 36px;
+      margin-top: 30px;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    #cake-img {
+      max-width: 300px;
+      margin-top: 50px;
+      box-shadow: 0px 0px 10px #888888;
+    }
+
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+      max-width: 500px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      max-width: 100%;
+      height: auto;
+      animation: fade 8s ease-in-out infinite;
+    }
+
+    .slide p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Navigation Menu Styles */
+    .nav {
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    .nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .nav ul li a {
+      color: #FFF;
+      text-decoration: none;
+    }
+
+  </style>
 </head>
 <body>
   <div class="nav">
     <ul>
       <li><a href="#">Happy Birthday!</a></li>
-      <li><a href="https://sudoku.com/evil/" target="_blank">Sudoku</a></li>
-      <li><a href="https://www.etsy.com/" target="_blank">Etsy</a></li>
-      <li><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></li>
+      <li><a href="https://sudoku.com/evil/"   target="_blank" >Sudoku   </a></li>
+      <li><a href="https://www.etsy.com/"   target="_blank" >Etsy </a></li>
+      <li><a href="https://www.pinterest.com/"   target="_blank" >Pinterest</a></li>
       <li><a href="https://www.depop.com/category/womens/?categoryPath=womens" target="_blank">Depop</a></li>
-      <li><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/feed/"    target="_blank">LinkedIn</a></li>
     </ul>
   </div>
 
@@ -26,51 +110,50 @@
   <div class="slideshow-container">
     <div class="slide active">
       <img src="image/blood.jpg" alt="Slideshow Image 1">
-      <p class="description">Aww look at my little gangsta!</p>
+      <p class="description"> Aww look at my little gangsta!</p>
     </div>
     <div class="slide">
       <img src="image/IMG-1666.jpg" alt="Slideshow Image 2">
-      <p class="description">Look at us matching, you look so cool here :)</p>
+      <p class="description">Look at us matching, you look so cool here :) </p>
     </div>
     <div class="slide">
       <img src="image/IMG-5930.jpg" alt="Slideshow Image 3">
-      <p class="description">First night as Zoe the wifey ;)</p>
+      <p class="description"> First night as Zoe the wifey ;) </p>
     </div>
     <div class="slide">
       <img src="image/IMG-8009.jpg" alt="Slideshow Image 4">
-      <p class="description">Zoe at da AMC be like ^^</p>
+      <p class="description"> Zoe at da AMC be like ^^ </p>
     </div>
     <div class="slide">
       <img src="image/IMG-0089.jpg" alt="Slideshow Image 5">
-      <p class="description">Princess with the fresh cut</p>
+      <p class="description"> Princess with the fresh cut </p>
     </div>
     <div class="slide">
       <img src="image/IMG-2900.JPG" alt="Slideshow Image 6">
-      <p class="description">Adorable couple sighting in Brooklyn</p>
+      <p class="description"> Adorable couple sighting in Brooklyn </p>
     </div>
     <div class="slide">
       <img src="image/IMG-5130.jpg" alt="Slideshow Image 7">
-      <p class="description">First night at da dorms together hehe</p>
+      <p class="description"> First night at da dorms together hehe </p>
     </div>
     <div class="slide">
       <img src="image/IMG-6111.jpg" alt="Slideshow Image 8">
-      <p class="description">I be rockafallin' at how effortlessly gorgeous you are</p>
+      <p class="description">I be rockafallin' at how effortlessly gorgeous you are </p>
     </div>
     <div class="slide">
       <img src="image/IMG-7956.JPG" alt="Slideshow Image 9">
-      <p class="description">My lil model on the fashion runway</p>
+      <p class="description"> My lil model on the fashion runway </p>
     </div>
     <div class="slide">
       <img src="image/IMG-8756.jpg" alt="Slideshow Image 10">
-      <p class="description">Museum mommy</p>
+      <p class="description"> Museum mommy </p>
     </div>
     <div class="slide">
       <img src="image/queen.jpg" alt="Slideshow Image 11">
-      <p class="description">Silly lil gorl</p>
+      <p class="description"> Silly lil gorl </p>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
