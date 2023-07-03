@@ -13,5 +13,5 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   showSlide(currentSlide);
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 8000); // Transition every 8 seconds (8000 milliseconds)
 });
