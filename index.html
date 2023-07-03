@@ -5,15 +5,14 @@
   <style>
     body {
       background-image: url('image/PURPLE.jpg');
-      background-size: cover;
       text-align: center;
-      font-family: 'Verdana', sans-serif;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
     }
 
     h1 {
       color: #FFF;
       font-size: 48px;
-      margin-top: 100px;
+      margin-top: 30px;
       text-shadow: 2px 2px 4px #000000;
     }
 
@@ -22,54 +21,36 @@
       line-height: 1.5;
       margin-bottom: 20px;
       color: #FFF;
-      text-align: justify;
-      margin-left: 10%;
-      margin-right: 10%;
     }
 
-    #cake-img {
-      max-width: 300px;
-      margin-top: 50px;
+    .envelope {
+      position: relative;
+      display: inline-block;
+      padding: 50px 100px;
+      background-color: #FFF;
+      border-radius: 10px;
       box-shadow: 0px 0px 10px #888888;
     }
 
-    .slideshow-container {
-      position: relative;
+    .envelope:before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
       margin: auto;
-      max-width: 500px;
-      overflow: hidden;
-      margin-top: 40px;
-    }
-
-    .slide {
-      display: none;
-    }
-
-    .slide.active {
-      display: block;
-    }
-
-    .slide img {
-      max-width: 100%;
-      height: auto;
-      animation: fade 8s ease-in-out infinite;
-    }
-
-    .slide p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    @keyframes fade {
-      0% { opacity: 0; }
-      25% { opacity: 1; }
-      75% { opacity: 1; }
-      100% { opacity: 0; }
+      height: 40px;
+      width: 80px;
+      background-color: #FFF;
+      transform: rotate(-45deg);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      box-shadow: 0px -3px 10px #888888;
     }
 
     /* Navigation Menu Styles */
     .nav {
-      background-color: #6C63FF;
+      background-color: #4B0082;
       padding: 10px 0;
       text-align: center;
     }
@@ -89,17 +70,20 @@
     .nav ul li a {
       color: #FFF;
       text-decoration: none;
-      padding: 10px;
-      border-radius: 5px;
     }
-
-    .nav ul li a:hover {
-      background-color: #4B46A0;
-    }
-
   </style>
 </head>
 <body>
+  <div class="envelope">
+    <h1>Happy Birthday Princess!</h1>
+    <img id="cake-img" src="image/zoe_baby.jpg" alt="Birthday Cake">
+
+    <p>Dear Zoe,</p>
+    <p>On your special day (as special as it can be without me, obviously), I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side :)</p>
+    <p>I hope your birthday is filled with love and happiness. We're all so proud of you for how well you're able to manage your way through life with a smile. Even though things are getting more and more difficult, and we have to deal with more and more adult responsibilities, you're always so youthfully optimistic it makes my heart melt. I promise this year is going to be one for the ages.</p>
+    <p>Thank you for being the wonderful person you are, and please, never grow up. Happy 20th birthday, my love!</p>
+  </div>
+
   <div class="nav">
     <ul>
       <li><a href="#">Happy Birthday!</a></li>
@@ -111,13 +95,6 @@
     </ul>
   </div>
 
-  <h1>Happy Birthday Princess!</h1>
-  <img id="cake-img" src="image/zoe_baby.jpg" alt="Birthday Cake">
-
-  <p>Dear Zoe,</p>
-  <p>On your special day (as special as it can be without me, obviously), I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side :)</p>
-  <p>I hope your birthday is filled with love and happiness. We're all so proud of you for how well you're able to manage your way through life with a smile. Even though things are getting more and more difficult, and we have to deal with more and more adult responsibilities, you're always so youthfully optimistic it makes my heart melt. I promise this year is going to be one for the ages.</p>
-  <p>Thank you for being the wonderful person you are, and please, never grow up. Happy 20th birthday, my love!</p>
   <div class="slideshow-container">
     <div class="slide active">
       <img src="image/blood.jpg" alt="Slideshow Image 1">
