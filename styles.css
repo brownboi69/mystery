@@ -53,3 +53,36 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* Background Animation */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgba(247, 251, 255, 0.1) 20%,
+    rgba(30, 115, 181, 0.2) 90%
+  );
+  animation: animateBackground 15s linear infinite;
+}
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
