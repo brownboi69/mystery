@@ -4,20 +4,20 @@
   <title>Happy Birthday!</title>
   <style>
     body {
-      background-color: #FDF5E6;
+      background-color: #FFD9E6;
       text-align: center;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     h1 {
       color: #FF69B4;
-      font-size: 32px;
+      font-size: 36px;
       margin-top: 30px;
       text-shadow: 2px 2px 4px #000000;
     }
 
     p {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.5;
       margin-bottom: 20px;
     }
@@ -40,88 +40,37 @@
       display: none;
       max-width: 100%;
       height: auto;
-      animation: fade 4s ease-in-out infinite;
+      animation: rotate 2s linear infinite;
     }
 
-    @keyframes fade {
-      0% { opacity: 0; transform: rotate(0deg); }
-      25% { opacity: 1; }
-      75% { opacity: 1; }
-      100% { opacity: 0; transform: rotate(360deg); }
-    }
-
-    .background-hearts {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .background-hearts .heart {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: #FF69B4;
-      border-radius: 50%;
-      animation: throbbing 1s ease-in-out infinite;
-    }
-
-    @keyframes throbbing {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <div class="background-hearts">
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-    <div class="heart"></div>
-  </div>
-
   <h1>Happy Birthday my sweet princess!</h1>
-  <img id="cake-img" src="https://brownboi69.github.io/mystery/image/zoe_baby.jpg" alt="Birthday Cake">
+  <img id="cake-img" src="image/zoe_baby.jpg" alt="Birthday Cake">
 
   <p>Dear Zoe,</p>
   <p>On your special day (as special as it can be without me, obviously), I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side :)</p>
   <p>I hope your birthday is filled with love, laughter, and amazing memories. May this year bring you abundant blessings and opportunities to pursue your dreams.</p>
   <p>Thank you for being the wonderful person you are. Happy 20th birthday, my love!</p>
-
   <div class="slideshow-container">
-    <img class="image-slide" src="https://example.com/path/to/image1.jpg" alt="Slideshow Image 1">
-    <img class="image-slide" src="https://example.com/path/to/image2.jpg" alt="Slideshow Image 2">
-    <img class="image-slide" src="https://example.com/path/to/image3.jpg" alt="Slideshow Image 3">
-    <!-- Add more image slides here -->
+    <img class="image-slide" src="image/image1.jpg" alt="Slideshow Image 1">
+    <img class="image-slide" src="image/image2.jpg" alt="Slideshow Image 2">
+    <img class="image-slide" src="image/image3.jpg" alt="Slideshow Image 3">
+    <img class="image-slide" src="image/image4.jpg" alt="Slideshow Image 4">
+    <img class="image-slide" src="image/image5.jpg" alt="Slideshow Image 5">
+    <img class="image-slide" src="image/image6.jpg" alt="Slideshow Image 6">
+    <img class="image-slide" src="image/image7.jpg" alt="Slideshow Image 7">
+    <img class="image-slide" src="image/image8.jpg" alt="Slideshow Image 8">
+    <img class="image-slide" src="image/image9.jpg" alt="Slideshow Image 9">
+    <img class="image-slide" src="image/image10.jpg" alt="Slideshow Image 10">
+    <img class="image-slide" src="image/image11.jpg" alt="Slideshow Image 11">
   </div>
 
-  <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      var slides = document.getElementsByClassName("image-slide");
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 15000); // Change slide every 15 seconds
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
