@@ -97,6 +97,19 @@
       background-color: #4B46A0;
     }
 
+    /* Countdown Styles */
+    #countdown {
+      display: block;
+    }
+
+    #content {
+      display: none;
+    }
+
+    #timer {
+      font-size: 32px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
@@ -111,60 +124,95 @@
     </ul>
   </div>
 
-  <h1>Happy Birthday Princess!</h1>
-  <img id="cake-img" src="image/zoe_baby.jpg" alt="Birthday Cake">
+  <div id="countdown">
+    <h1>Countdown to Midnight</h1>
+    <div id="timer">
+      <span id="hours"></span> hours
+      <span id="minutes"></span> minutes
+      <span id="seconds"></span> seconds
+    </div>
+  </div>
 
-  <p>Dear Zoe,</p>
-  <p>On your special day (as special as it can be without me, obviously), I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side :)</p>
-  <p>I hope your birthday is filled with love and happiness. We're all so proud of you for how well you're able to manage your way through life with a smile. Even though things are getting more and more difficult, and we have to deal with more and more adult responsibilities, you're always so youthfully optimistic it makes my heart melt. I promise this year is going to be one for the ages.</p>
-  <p>Thank you for being the wonderful person you are, and please, never grow up. Happy 20th birthday, my love!</p>
-  <div class="slideshow-container">
-    <div class="slide active">
-      <img src="image/blood.jpg" alt="Slideshow Image 1">
-      <p class="description">Aww look at my little gangsta!</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-1666.jpg" alt="Slideshow Image 2">
-      <p class="description">Look at us matching, you look so cool here :)</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-5930.jpg" alt="Slideshow Image 3">
-      <p class="description">First night as Zoe the wifey ;)</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-8009.jpg" alt="Slideshow Image 4">
-      <p class="description">Zoe at da AMC be like ^^</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-0089.jpg" alt="Slideshow Image 5">
-      <p class="description">Princess with the fresh cut</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-2900.JPG" alt="Slideshow Image 6">
-      <p class="description">Adorable couple sighting in Brooklyn</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-5130.jpg" alt="Slideshow Image 7">
-      <p class="description">First night at da dorms together hehe</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-6111.jpg" alt="Slideshow Image 8">
-      <p class="description">I be rockafallin' at how effortlessly gorgeous you are</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-7956.JPG" alt="Slideshow Image 9">
-      <p class="description">My lil model on the fashion runway</p>
-    </div>
-    <div class="slide">
-      <img src="image/IMG-8756.jpg" alt="Slideshow Image 10">
-      <p class="description">Museum mommy</p>
-    </div>
-    <div class="slide">
-      <img src="image/queen.jpg" alt="Slideshow Image 11">
-      <p class="description">Silly lil gorl</p>
+  <div id="content" style="display: none;">
+    <h1>Happy Birthday Princess!</h1>
+    <img id="cake-img" src="image/zoe_baby.jpg" alt="Birthday Cake">
+
+    <p>Dear Zoe,</p>
+    <p>On your special day (as special as it can be without me, obviously), I want to let you know how sweet, kind, caring, lovable, adorable, beautiful, and precious you are. You bring so much joy and happiness into my life, and I'm incredibly grateful to have you by my side :)</p>
+    <p>I hope your birthday is filled with love and happiness. We're all so proud of you for how well you're able to manage your way through life with a smile. Even though things are getting more and more difficult, and we have to deal with more and more adult responsibilities, you're always so youthfully optimistic it makes my heart melt. I promise this year is going to be one for the ages.</p>
+    <p>Thank you for being the wonderful person you are, and please, never grow up. Happy 20th birthday, my love!</p>
+    <div class="slideshow-container">
+      <div class="slide active">
+        <img src="image/blood.jpg" alt="Slideshow Image 1">
+        <p class="description">Aww look at my little gangsta!</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-1666.jpg" alt="Slideshow Image 2">
+        <p class="description">Look at us matching, you look so cool here :)</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-5930.jpg" alt="Slideshow Image 3">
+        <p class="description">First night as Zoe the wifey ;)</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-8009.jpg" alt="Slideshow Image 4">
+        <p class="description">Zoe at da AMC be like ^^</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-0089.jpg" alt="Slideshow Image 5">
+        <p class="description">Princess with the fresh cut</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-2900.JPG" alt="Slideshow Image 6">
+        <p class="description">Adorable couple sighting in Brooklyn</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-5130.jpg" alt="Slideshow Image 7">
+        <p class="description">First night at da dorms together hehe</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-6111.jpg" alt="Slideshow Image 8">
+        <p class="description">I be rockafallin' at how effortlessly gorgeous you are</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-7956.JPG" alt="Slideshow Image 9">
+        <p class="description">My lil model on the fashion runway</p>
+      </div>
+      <div class="slide">
+        <img src="image/IMG-8756.jpg" alt="Slideshow Image 10">
+        <p class="description">Museum mommy</p>
+      </div>
+      <div class="slide">
+        <img src="image/queen.jpg" alt="Slideshow Image 11">
+        <p class="description">Silly lil gorl</p>
+      </div>
     </div>
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Countdown Timer
+    function countdown() {
+      var now = new Date();
+      var target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+      var timeLeft = target - now;
+
+      var hours = Math.floor(timeLeft / (1000 * 60 * 60));
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById('hours').innerHTML = hours;
+      document.getElementById('minutes').innerHTML = minutes;
+      document.getElementById('seconds').innerHTML = seconds;
+
+      if (timeLeft <= 0) {
+        document.getElementById('countdown').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        clearInterval(timer);
+      }
+    }
+
+    var timer = setInterval(countdown, 1000);
+  </script>
 </body>
 </html>
