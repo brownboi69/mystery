@@ -1,15 +1,17 @@
-var slideIndex = 0;
-showSlides();
+window.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
 
-function showSlides() {
-  var slides = document.getElementsByClassName("image-slide");
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  function showSlide(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slides[index].classList.add("active");
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
   }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 15000); // Change slide every 15 seconds
-}
+
+  showSlide(currentSlide);
+  setInterval(nextSlide, 5000);
+});
